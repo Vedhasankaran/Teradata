@@ -1,0 +1,15 @@
+1.Software Installation and APS for GIT
+2.Configuration and Setup RSA
+	Key Creation via GitBash SSH
+		ssh-keygen -t ed22519 -C "cdsid@ford.com"		
+	Addition to Git Account/Profile
+	Enable the added Key  via Gitbash
+		eval `ssh-agent -s`
+		ssh-add the-File-Created
+3.Clone the REPO
+	Gitbash
+	Browser
+4.Check-out Branching and Status
+5.Applying Changes (Push)
+6.Merging the Changes (Pull -- fetch and Merge and Commit)
+7.Verifying in Browser
