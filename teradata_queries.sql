@@ -436,3 +436,26 @@ Select top 1* from database.table1; =n
 Here “=n” is to run the previous sql statement, “n” number of times.
 SELECT INDEX(‘Write’, ‘i’); Displays Result as ‘3’
 SELECT INDEX(‘Write’, ‘te’); Displays Result as ‘4’
+
+
+----------------------------------------------------------------------------------------------
+-- ROLES BASED RETREIVAL
+----------------------------------------------------------------------------------------------
+
+SELECT  rr.rolename,rm.grantee
+FROM dbc.allrolerights rr
+LEFT OUTER JOIN
+DBC.ROLEMEMBERS rm
+ON rr.rolename=rm.rolename
+WHERE  rr.databasename IN ('XXXXXXXXXXXXXXXXX')
+group by 1,2
+order by 1,2
+
+SELECT  rr.rolename,rm.grantee
+FROM dbc.allrolerights rr
+LEFT OUTER JOIN
+DBC.ROLEMEMBERS rm
+ON rr.rolename=rm.rolename
+WHERE   rm.grantee = 'XXXXXXXXXXXxx'
+group by 1,2
+order by 1,2
